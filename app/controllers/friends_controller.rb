@@ -25,7 +25,7 @@ class FriendsController < ApplicationController
         unless room.present?
             value={
                 user_id: @friend.user_id,
-                friend_id: @friend.id
+                friend_id: @friend.id,
                 rooom_id: room_id
             }
             room = Room.new(value)
@@ -34,6 +34,8 @@ class FriendsController < ApplicationController
         puts room.inspect
         redirect_to root_path
 
+    end
+    def show
     end
     def destroy
         friend_1 = Friend.find_by(params[:id])

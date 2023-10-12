@@ -17,7 +17,7 @@
 						<% if @friends_email.include?user.email%>
 							<td>ADDED</td>
 						<% else %>
-							<td><%= link_to 'Add' ,new_friends_path(:add_friend => user) , class:"btn btn-primary"%></td>
+							<td><%= link_to 'Add' ,new_friend_path(:add_friend => user) , class:"btn btn-primary"%></td>
 						<% end %>
 					</tr>
 				<% end %>
